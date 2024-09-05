@@ -14,6 +14,20 @@ function Content() {
                 setData(data);
             });
     }, [type]);
+
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            console.log(window.scrollY);
+            if (window.scrollY >= 200) {
+                window.scrollTo(0, 0);
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+
+
+    }, [])
     return (
         <>
             <h1>Content</h1>
