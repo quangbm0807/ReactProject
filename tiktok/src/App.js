@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Content from './component/Content';
 import Lession from './component/Lession';
+import LayOutEffect from './component/LayOutEffect';
 // import ContentEffectTimeout from './component/ContentEffectTimeout';
 // import PreviewAvt from './component/PreviewAvt';
 
@@ -102,31 +103,18 @@ function App() {
   //     setTask('');
   //   }
   // };
-  const [mounted, setMounted] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+  const [showLession, setShowLession] = useState(false);
+  const [showLayoutEffect, setShowLayoutEffect] = useState(false);
 
   return (
     <div style={{ padding: 20 }}>
-      {/* <input
-        value={task}
-        type="text"
-        onChange={(e) => setTask(e.target.value)}
-      />
-      <button
-        onClick={
-          () => handleAddTask(task)}
-      >
-        Add
-      </button>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ul> */}
-      <button onClick={() => setMounted(!mounted)} >Click</button>
-      {/* {mounted && <Content />} */}
-      {mounted && <Lession />}
-      {/* <ContentEffectTimeout />
-      <PreviewAvt /> */}
+      <button onClick={() => setShowContent(!showContent)} >Content API</button>
+      {showContent && <Content />}
+      <button onClick={() => setShowLession(!showLession)} >Remove Memory Leak</button>
+      {showLession && <Lession />}
+      <button onClick={() => setShowLayoutEffect(!showLayoutEffect)} >Use LayoutEffect</button>
+      {showLayoutEffect && <LayOutEffect />}
     </div>
   );
 }
