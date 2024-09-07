@@ -25,7 +25,7 @@ export default function PreviewAvt() {
     return (
         <div>
             <input type="file" onChange={handleChange} />
-            <img src={preview} />
+            {preview && <img src={preview} alt="preview" />}
         </div>
     )
 }
