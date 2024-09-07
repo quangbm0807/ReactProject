@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import Content from './Content';
-
+import Content from './component/Content';
+import ContentEffectTimeout from './component/ContentEffectTimeout';
+import PreviewAvt from './component/PreviewAvt';
 
 // const gifts = ['CPU i9',
 //   'RAM 16GB',
@@ -122,6 +123,8 @@ function App() {
       </ul> */}
       <button onClick={() => setMounted(!mounted)} >Click</button>
       {mounted && <Content />}
+      <ContentEffectTimeout />
+      <PreviewAvt />
     </div>
   );
 }
