@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Content from './component/Content';
 import Lession from './component/Lession';
 import LayOutEffect from './component/LayOutEffect';
+import UseRefHook from './component/UseRefHook';
 // import ContentEffectTimeout from './component/ContentEffectTimeout';
 // import PreviewAvt from './component/PreviewAvt';
 
@@ -106,6 +107,7 @@ function App() {
   const [showContent, setShowContent] = useState(false);
   const [showLession, setShowLession] = useState(false);
   const [showLayoutEffect, setShowLayoutEffect] = useState(false);
+  const [showUseRef, setShowUseRef] = useState(false);
 
   return (
     <div style={{ padding: 20 }}>
@@ -115,6 +117,8 @@ function App() {
       {showLession && <Lession />}
       <button onClick={() => setShowLayoutEffect(!showLayoutEffect)} >Use LayoutEffect</button>
       {showLayoutEffect && <LayOutEffect />}
+      <button onClick={() => setShowUseRef(!showUseRef)} >Use UseRefHook</button>
+      {showUseRef && <UseRefHook />}
     </div>
   );
 }
