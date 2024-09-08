@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import Memo from "./Memo";
 
 
 export default function UseRefHook() {
@@ -20,6 +21,7 @@ export default function UseRefHook() {
 
     return (
         <>
+            <Memo />
             <h1>Count: {count}</h1>
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
