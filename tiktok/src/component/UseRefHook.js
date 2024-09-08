@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import * as Mui from "@mui/material";
 import Memo from "./Memo";
 
 
@@ -22,9 +23,9 @@ export default function UseRefHook() {
     return (
         <>
             <Memo />
-            <h1>Count: {count}</h1>
-            <button onClick={handleStart}>Start</button>
-            <button onClick={handleStop}>Stop</button>
+            <Mui.InputLabel>Count: {count}</Mui.InputLabel>
+            <Mui.ButtonBase onClick={handleStart}>Start</Mui.ButtonBase>
+            <Mui.Button onClick={handleStop}>Stop</Mui.Button>
         </>
     )
 
