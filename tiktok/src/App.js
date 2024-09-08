@@ -3,6 +3,7 @@ import Content from './component/Content';
 import Lession from './component/Lession';
 import LayOutEffect from './component/LayOutEffect';
 import UseRefHook from './component/UseRefHook';
+import Memo from './component/Memo';
 // import ContentEffectTimeout from './component/ContentEffectTimeout';
 // import PreviewAvt from './component/PreviewAvt';
 
@@ -119,6 +120,8 @@ function App() {
       {showLayoutEffect && <LayOutEffect />}
       <button onClick={() => setShowUseRef(!showUseRef)} >Use UseRefHook</button>
       {showUseRef && <UseRefHook />}
+
+
     </div>
   );
 }
